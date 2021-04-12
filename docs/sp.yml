@@ -1,0 +1,11 @@
+on: [push]
+
+jobs:
+  build:
+    name: fuzzy
+    steps:
+      - uses: youssef/fuzzy@main
+        id: docs
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          create_readme: true
